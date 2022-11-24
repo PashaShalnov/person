@@ -1,6 +1,7 @@
 package telran.java2022.person.service;
 
 import java.time.LocalDate;
+import java.util.stream.Collectors;
 
 import javax.transaction.Transactional;
 
@@ -89,7 +90,7 @@ public class PersonServiceImpl implements PersonService {
 	public Iterable<CityPopulationDto> getCitiesPopulation() {
 		return personRepository.getCitiesPopulation()
 				.map(cp -> modelMapper.map(cp, CityPopulationDto.class))
- 				.toList();
+ 				.collect(Collectors.toList());
 	}
 
 }
