@@ -1,12 +1,13 @@
 package telran.java2022.person.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 
 @Getter
-@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class CityPopulationDto {
 	String city;
 	Long population;
-	
 }
