@@ -131,7 +131,7 @@ public class PersonServiceImpl implements PersonService, CommandLineRunner {
 		Class<? extends PersonDto> list = PersonToDtoCorrelation
 							.entrySet()
 							.stream()
-							.filter(entry -> per.equals(entry.getValue()))
+							.filter(o -> per.equals(o.getValue()))
 							.map(Map.Entry::getKey)
 							.findFirst()
 							.get();
